@@ -1,0 +1,483 @@
+@import 'base.css';
+@import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+a,
+.green,
+.btn,
+.transition {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+#cover-img {
+  max-width: 100%;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: 100% 0%;
+}
+
+.book-img {
+  height: 300px;
+  border-radius: 0px;
+}
+
+.splide__arrow {
+  margin-top: 200px;
+  z-index: 0;
+  background-color: #e1e1e143;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+}
+
+.splide__track {
+  margin: 0px 90px;
+  padding: 0px 5px 30px !important;
+}
+
+.book-img {
+  display: block;
+  transition: all .3s ease;
+}
+
+.book-img:hover {
+  transform: scale(0.95);
+}
+
+.form-group {
+  padding: 5px 0px;
+}
+
+.form-group label {
+  padding: 5px 0px;
+}
+
+.card-title {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+
+.claimedRight {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* .footer {
+  position: fixed !important;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-background);
+} */
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.customize-table {
+  --easy-table-border: 1px solid #445269;
+  --easy-table-row-border: 1px solid #445269;
+
+  --easy-table-header-font-size: 14px;
+  --easy-table-header-height: 50px;
+  --easy-table-header-font-color: #0083f5;
+  --easy-table-header-background-color: #2d3a4f;
+
+  --easy-table-header-item-padding: 10px 15px;
+
+  --easy-table-body-even-row-font-color: #fff;
+  --easy-table-body-even-row-background-color: #4c5d7a;
+
+  --easy-table-body-row-font-color: #c0c7d2;
+  --easy-table-body-row-background-color: #2d3a4f;
+  --easy-table-body-row-height: 50px;
+  --easy-table-body-row-font-size: 14px;
+
+  --easy-table-body-row-hover-font-color: #2d3a4f;
+  --easy-table-body-row-hover-background-color: #eee;
+
+  --easy-table-body-item-padding: 10px 15px;
+
+  --easy-table-footer-background-color: #2d3a4f;
+  --easy-table-footer-font-color: #c0c7d2;
+  --easy-table-footer-font-size: 14px;
+  --easy-table-footer-padding: 0px 10px;
+  --easy-table-footer-height: 50px;
+
+  --easy-table-rows-per-page-selector-width: 70px;
+  --easy-table-rows-per-page-selector-option-padding: 10px;
+  --easy-table-rows-per-page-selector-z-index: 1;
+
+
+  --easy-table-scrollbar-track-color: #2d3a4f;
+  --easy-table-scrollbar-color: #2d3a4f;
+  --easy-table-scrollbar-thumb-color: #4c5d7a;
+  ;
+  --easy-table-scrollbar-corner-color: #2d3a4f;
+
+  --easy-table-loading-mask-background-color: #2d3a4f;
+}
+
+.user-customize-table {
+  /* --easy-table-border: 1px solid #445269;
+  --easy-table-row-border: 1px solid #445269; */
+
+  --easy-table-header-font-size: 14px;
+  --easy-table-header-height: 50px;
+  --easy-table-header-font-color: #0083f5;
+  /* --easy-table-header-background-color: #2d3a4f; */
+
+  --easy-table-header-item-padding: 10px 15px;
+
+  /* --easy-table-body-even-row-font-color: #fff;
+  --easy-table-body-even-row-background-color: #4c5d7a; */
+
+  /* --easy-table-body-row-font-color: #c0c7d2;
+  --easy-table-body-row-background-color: #2d3a4f; */
+  --easy-table-body-row-height: 50px;
+  --easy-table-body-row-font-size: 14px;
+
+  --easy-table-body-row-hover-font-color: #2d3a4f;
+  --easy-table-body-row-hover-background-color: #eee;
+
+  --easy-table-body-item-padding: 10px 15px;
+
+  /* --easy-table-footer-background-color: #2d3a4f; */
+  /* --easy-table-footer-font-color: #c0c7d2; */
+  --easy-table-footer-font-size: 14px;
+  --easy-table-footer-padding: 0px 10px;
+  --easy-table-footer-height: 50px;
+
+  --easy-table-rows-per-page-selector-width: 70px;
+  --easy-table-rows-per-page-selector-option-padding: 10px;
+  --easy-table-rows-per-page-selector-z-index: 1;
+
+
+  --easy-table-scrollbar-track-color: #2d3a4f;
+  --easy-table-scrollbar-color: #2d3a4f;
+  --easy-table-scrollbar-thumb-color: #4c5d7a;
+  ;
+  --easy-table-scrollbar-corner-color: #2d3a4f;
+
+  --easy-table-loading-mask-background-color: #2d3a4f;
+}
+
+th span {
+  font-weight: bold !important;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+@media (hover: hover) {
+
+  .a-hover:hover,
+  .transition:hover {
+    background-color: hsla(0, 0%, 66%, 0.2);
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  .btn-hover:hover {
+    box-shadow: 0px 0px 0px 5px hsla(0, 0%, 66%, 0.2);
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .card-title {
+    font-size: 20px !important;
+  }
+
+  .card-publisher {
+    font-size: 15px !important;
+  }
+
+  .book-img {
+    height: 250px;
+  }
+
+  .splide__arrow {
+    margin-top: 180px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .card-title {
+    font-size: 10px !important;
+  }
+
+  .card-text {
+    font-size: 10px !important;
+  }
+
+  .card-publisher {
+    font-size: 10px !important;
+  }
+
+  #cover-img {
+    height: 160px;
+  }
+
+  .book-img {
+    height: 150px;
+  }
+
+  .splide__arrow {
+    margin-top: 140px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  #cover-img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 425px) {
+  .col-xs {
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xs-auto>* {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xs-1>* {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xs-2>* {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xs-3>* {
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xs-4>* {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xs-5>* {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xs-6>* {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+
+  .col-xs-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-xs-1 {
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-xs-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-xs-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-xs-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-xs-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-xs-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-xs-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-xs-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-xs-9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-xs-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-xs-11 {
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-xs-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .offset-xs-0 {
+    margin-left: 0;
+  }
+
+  .offset-xs-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .offset-xs-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .offset-xs-3 {
+    margin-left: 25%;
+  }
+
+  .offset-xs-4 {
+    margin-left: 33.33333333%;
+  }
+
+  .offset-xs-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .offset-xs-6 {
+    margin-left: 50%;
+  }
+
+  .offset-xs-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .offset-xs-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .offset-xs-9 {
+    margin-left: 75%;
+  }
+
+  .offset-xs-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .offset-xs-11 {
+    margin-left: 91.66666667%;
+  }
+
+  .g-xs-0,
+  .gx-xs-0 {
+    --bs-gutter-x: 0;
+  }
+
+  .g-xs-0,
+  .gy-xs-0 {
+    --bs-gutter-y: 0;
+  }
+
+  .g-xs-1,
+  .gx-xs-1 {
+    --bs-gutter-x: 0.25rem;
+  }
+
+  .g-xs-1,
+  .gy-xs-1 {
+    --bs-gutter-y: 0.25rem;
+  }
+
+  .g-xs-2,
+  .gx-xs-2 {
+    --bs-gutter-x: 0.5rem;
+  }
+
+  .g-xs-2,
+  .gy-xs-2 {
+    --bs-gutter-y: 0.5rem;
+  }
+
+  .g-xs-3,
+  .gx-xs-3 {
+    --bs-gutter-x: 1rem;
+  }
+
+  .g-xs-3,
+  .gy-xs-3 {
+    --bs-gutter-y: 1rem;
+  }
+
+  .g-xs-4,
+  .gx-xs-4 {
+    --bs-gutter-x: 1.5rem;
+  }
+
+  .g-xs-4,
+  .gy-xs-4 {
+    --bs-gutter-y: 1.5rem;
+  }
+
+  .g-xs-5,
+  .gx-xs-5 {
+    --bs-gutter-x: 3rem;
+  }
+
+  .g-xs-5,
+  .gy-xs-5 {
+    --bs-gutter-y: 3rem;
+  }
+}
