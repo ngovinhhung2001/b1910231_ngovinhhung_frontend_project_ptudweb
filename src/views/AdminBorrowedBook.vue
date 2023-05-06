@@ -22,7 +22,7 @@
         :search-value="searchValue" :loading="loading" :header-class-name="'text-center'" :body-text-direction="'center'"
         :header-text-direction="'center'">
         <template #item-status="{ _id, status }">
-            <div class="row">
+            <div class="row justify-content-center">
                 <p @click="approve(_id)" v-if="status == 0" class="m-0 text-warning">
                     <i class="fas fa-circle"></i>
                 </p>
@@ -33,18 +33,18 @@
             </div>
         </template>
         <template #item-action="{ _id }">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="btn btn-primary d-block" data-bs-toggle="modal"
                     v-bind:data-bs-target="'#borrowedbookmodal' + _id" style="width: 40px;"><i class="fas fa-info"></i>
                 </div>
             </div>
         </template>
-        <template #header-action>
+        <!-- <template #header-action>
             <div class="row">
                 <div class="btn btn-primary d-block" data-bs-toggle="modal" v-bind:data-bs-target="'#modal'"
                     style="width: 40px;"><i class="fas fa-plus"></i></div>
             </div>
-        </template>
+        </template> -->
         <template #empty-message>
             <span class="h5 text-primary">Không có dữ liệu</span>
         </template>

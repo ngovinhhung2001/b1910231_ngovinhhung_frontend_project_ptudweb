@@ -4,21 +4,33 @@
     </div>
 
     <p class="h2 text-center m-3 text-uppercase text-primary fw-bold">Quản lý Sách</p>
+    <div class="d-flex justify-content-center mb-2">
+        <div class="col-auto">
+            <span class="fw-bold">Cột: </span>
+            <select v-model="searchField" style="height: 29px">
+                <option value="name">Tên sách</option>
+                <option value="author.name">Tên tác giả</option>
+                <option value="publisher.name">Tên nhà xuất bản</option>
+            </select>
+            <span class="ms-3 fw-bold">Giá trị: </span>
+            <input type="text" v-model="searchValue">
+        </div>
+    </div>
     <EasyDataTable class="customize-table" :headers="headers" :items="items" :rows-per-page="5" :hide-rows-per-page="true"
         show-index fixed-index :alternating="true" :buttons-pagination="true" theme-color="#1d90ff" :table-min-height="585"
-        :index-column-width="15" :loading="loading" :header-class-name="'text-center'" :body-text-direction="'center'"
-        :header-text-direction="'center'">
+        :index-column-width="15" :search-field="searchField" :search-value="searchValue" :loading="loading"
+        :header-class-name="'text-center'" :body-text-direction="'center'" :header-text-direction="'center'">
         <template #item-image="{ image }">
             <img :src="'http://localhost:3000/api/images/' + image" style="height: 80px;" />
         </template>
         <template #item-action="{ _id }">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="btn btn-primary" data-bs-toggle="modal" v-bind:data-bs-target="'#modal' + _id"
                     style="width: 40px;">
                     <i class="fas fa-pen"></i>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="btn btn-primary mt-2" style="width: 40px;" @click="deleteBook(_id)">
                     <i class="fas fa-trash"></i>
                 </div>
@@ -98,6 +110,8 @@ export default {
             ],
             items: [],
             loading: true,
+            searchField: '',
+            searchValue: '',
         }
     },
     methods: {

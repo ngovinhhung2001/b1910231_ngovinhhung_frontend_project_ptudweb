@@ -8,13 +8,13 @@
         :index-column-width="4" :loading="loading" :header-class-name="'text-center'" :body-text-direction="'center'"
         :header-text-direction="'center'">
         <template #item-action="{ _id }">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="btn btn-primary" data-bs-toggle="modal" v-bind:data-bs-target="'#modal' + _id"
                     style="width: 40px;">
                     <i class="fas fa-pen"></i>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="btn btn-primary mt-2" style="width: 40px;" @click="deletePublisher(_id)">
                     <i class="fas fa-trash"></i>
                 </div>
