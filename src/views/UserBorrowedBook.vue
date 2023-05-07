@@ -2,14 +2,14 @@
     <img id="cover-img" src="/assets/images/cover.jpg">
     <div class="container mt-3" style="min-height: 50vh;">
         <div class="row justify-content-around">
-            <div class="mb-3 mt-1 text-center transition">
+            <div class="mb-2 text-center transition">
                 <h2 class="d-inline"></h2>
                 <h3 class="d-inline text-primary text-uppercase">Tất cả phiếu mượn</h3>
             </div>
             <!-- <hr> -->
             <EasyDataTable class="user-customize-table mt-2 p-0 w-50" :headers="headers" :items="items" :rows-per-page="3"
                 :hide-rows-per-page="true" show-index fixed-index :buttons-pagination="true" theme-color="#1d90ff"
-                :table-min-height="0" :index-column-width="10" :loading="loading">
+                :table-min-height="225" :index-column-width="10" :loading="loading">
                 <template #item-status="{ status }">
                     <div class="row">
                         <p v-if="status == 0" class="m-0 text-warning">

@@ -3,10 +3,20 @@
     <div class="container">
     </div>
     <p class="h2 text-center m-3 text-uppercase text-primary fw-bold">Quản lý Nhà xuất bản</p>
+    <div class="d-flex justify-content-center mb-2">
+        <div class="col-auto">
+            <span class="fw-bold">Cột: </span>
+            <select v-model="searchField" style="height: 29px">
+                <option value="name">Tên nhà xuất bản</option>
+            </select>
+            <span class="ms-3 fw-bold">Giá trị: </span>
+            <input type="text" v-model="searchValue">
+        </div>
+    </div>
     <EasyDataTable class="customize-table" :headers="headers" :items="items" :rows-per-page="5" :hide-rows-per-page="true"
         show-index fixed-index :alternating="true" :buttons-pagination="true" theme-color="#1d90ff" :table-min-height="580"
-        :index-column-width="4" :loading="loading" :header-class-name="'text-center'" :body-text-direction="'center'"
-        :header-text-direction="'center'">
+        :index-column-width="4" :loading="loading" :search-field="searchField" :search-value="searchValue"
+        :header-class-name="'text-center'" :body-text-direction="'center'" :header-text-direction="'center'">
         <template #item-action="{ _id }">
             <div class="row justify-content-center">
                 <div class="btn btn-primary" data-bs-toggle="modal" v-bind:data-bs-target="'#modal' + _id"
@@ -59,6 +69,8 @@ export default {
             ],
             items: [],
             loading: true,
+            searchField: '',
+            searchValue: '',
         }
     },
     methods: {

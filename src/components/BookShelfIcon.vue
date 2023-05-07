@@ -1,13 +1,6 @@
 <template>
     <div class="text-right" style="position: fixed; right: 7%; bottom: 10%;">
         <div class="d-flex mb-2">
-            <router-link :to="{ name: 'search' }">
-                <a class="btn btn-primary fw-bold" style="width: 40px; align-self: center;">
-                    <i class="fas fa-search"></i>
-                </a>
-            </router-link>
-        </div>
-        <div class="d-flex">
             <a class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#bookShelfModal"
                 style="width: 40px; align-self: center;">
                 <i class="fas fa-book"></i>
@@ -17,7 +10,13 @@
                 </span>
             </a>
         </div>
-
+        <div class="d-flex">
+            <router-link :to="{ name: 'search' }">
+                <a class="btn btn-primary fw-bold" style="width: 40px; align-self: center;">
+                    <i class="fas fa-search"></i>
+                </a>
+            </router-link>
+        </div>
     </div>
 
     <!-- Modal -->
