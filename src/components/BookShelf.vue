@@ -61,7 +61,7 @@
                     <form @submit.prevent="handleSubmit">
                         <div class="row">
                             <input type="submit" class="btn btn-primary me-3 mx-auto d-block text-uppercase fw-bold"
-                                value="Gửi phiếu" style="width: auto;">
+                                value="Gửi phiếu" style="width: auto;" data-bs-dismiss="modal">
                         </div>
                     </form>
                 </div>
